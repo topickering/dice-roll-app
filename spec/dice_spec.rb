@@ -3,7 +3,8 @@ require 'dice'
 RSpec.describe Dice do
 
   it 'returns a number between 1 and 6 when rolled' do
-    expect(subject.roll(1)[0]).to be_between(1, 6)
+    n = rand(10)
+    expect(subject.roll(n)[n-1]).to be_between(1, 6)
   end
 
   it 'allows any number of dice to be rolled' do
@@ -11,7 +12,8 @@ RSpec.describe Dice do
   end
 
   it 'shows the result of each roll' do
-    expect(subject.roll(2).length).to eq(2)
+    n = rand(10)
+    expect(subject.roll(n).length).to eq(n)
   end
 
 end
