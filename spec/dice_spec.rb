@@ -13,7 +13,7 @@ RSpec.describe Dice do
 
   it 'shows the result of each roll' do
     n = rand(10)
-    expect(subject.roll(n).length).to eq(n)
+    expect(subject.roll(n).count).to eq(n)
   end
 
 end
